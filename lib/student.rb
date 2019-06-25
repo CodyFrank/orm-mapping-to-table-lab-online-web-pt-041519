@@ -15,7 +15,7 @@ attr_reader :id
     grade INTEGER
     )
     SQL
-    DB[:conn].ececute(sql)
+    DB[:conn].execute(sql)
   end
 
 
