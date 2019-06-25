@@ -6,6 +6,11 @@ class Student
 attr_accessor :name, :grade
 attr_reader :id
 
+  def initialize(name, grade, id = nil)
+    @name = name
+    @id = id
+    @grade = grade
+  end
 
   def self.create_table
     sql = <<-SQL
@@ -24,13 +29,4 @@ attr_reader :id
     SQL
     DB[:conn].execute(sql)
   end
-
-
-  def initialize(name, grade, id = nil)
-    @name = name
-    @id = id
-    @grade = grade
-  end
-
-
 end
